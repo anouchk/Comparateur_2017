@@ -10,10 +10,10 @@ The projet was then re-used by the design and developers team at my newswire, wh
 
 # Comparateur pour l'élection présidentielle 2017
 
-Cette application permet de <b>comparer, par thème et par sous-thème, les programmes des six principaux candidats à l'élection présidentielle 2017</b>. Le développement a été réalisé avant le résultat de la primaire du parti socialiste, et appliqué au sujet de l'environneent, que je couvre au sein de l'agence AEF où je travaille en tant que journaliste.
+Cette application permet de <b>comparer, par thème et par sous-thème, les programmes des six principaux candidats à l'élection présidentielle 2017</b>. Le développement a été réalisé avant le résultat de la primaire du parti socialiste, et appliqué au sujet de l'environnement, que je couvre au sein de l'agence AEF où je travaille en tant que journaliste.
 
 N'ayant pas de connaissances en "back" pour stocker les données, j'ai utilisé <b>Angular.JS</b> pour imaginer le système qui permettrait à un journaliste de créer un thème, un sous-thème, et de remplir un contenu par candidat. 
 
 J'ai voulu que le système soit le plus ressemblant au front, afin que le journaliste ait, dès le back-office, une idée la plus précise possible de ce que ça va donner en ligne. 
 
-Réalisé dans le cadre d'un projet de fin de formation auprès de Simplon, le programme a ensuite été repris par l'équipe de développeurs et design de l'agence de presse spécialisée AEF, pour l'appliquer auprès des lecteurs.
+Réalisé dans le cadre d'un projet de fin de formation auprès de Simplon, le programme a ensuite été repris par l'équipe de développeurs et design de mon agence, qui l'a reconstruit en introduisant de l'Ajax pour stocker les données.
