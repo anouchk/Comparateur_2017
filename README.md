@@ -16,7 +16,7 @@ The projet was then re-used by the design and developers team at my newswire, wh
 
 # Comparateur pour l'élection présidentielle 2017
 
-Cette **<a href="https://anouchk.github.io/Comparateur_2017/comparateur_journalistes_contenus.html">application</a>** permet de <b>comparer, par thème et par sous-thème, les programmes des six principaux candidats à l'élection présidentielle 2017</b>. Le développement a été réalisé avant le résultat de la primaire du parti socialiste, et appliqué au sujet de l'environnement, que je couvre au sein de l'agence AEF où je travaille en tant que journaliste. Les contenus ne sont pas réellement ceux des candidats.
+Cette **<a href="https://anouchk.github.io/Comparateur_2017/comparateur_journalistes_contenus.html">application</a>** permet de <b>comparer, par thème et par sous-thème, les programmes des six principaux candidats à l'élection présidentielle 2017</b>. Le développement a été réalisé avant le résultat de la primaire du parti socialiste, et appliqué au sujet de l'environnement, que je couvre au sein de l'agence AEF où je travaille en tant que journaliste. Disclaimer : les contenus ne sont pas réellement ceux des candidats, le candidat du PS est Hamon et non Valls, le parti d'Emmanuel Macron est En March et non Laprimaire.org.
 
 **Angular** 
 
