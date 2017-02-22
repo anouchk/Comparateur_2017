@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="Comparateur" lang="fr">
+	<head>
+    	<meta charset="utf-8">
+    	<title>Présidentielle 2017 : le comparateur de programmes</title>
+		<script src="angular.min.js"></script>
+    	<script src="comparateur_journalistes_contenus.js"></script>
+    	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="comparateur_journalistes_contenus.css">
+	</head>
+	
+	<body>
+
+		<header>
+			<nav id="en-tete" class="navbar navbar-inverse navbar-fixed-top"> 
+				<div class=container-fluid>
+					<div class="col-md-1"><img src="images/logo_aef_info.svg" id="logo"> </div>
+					<div class="col-md-10"><h1> Présidentielle 2017 : le comparateur de programmes </h1></div>
+					<div ng-controller="ImgPlusController">
+						<div class="col-md-1" ng-click="derouleMenu();"><img src="images/menu_{{signe}}.svg" id="plus"></div>
+					</div>
+				</div>
+				<div class="container-fluid" id="menu" ng-show="deroulePlus">
+					<ul class = "nav navbar-nav">
+						<li class= "col-md-1"></li>
+						<li class= "col-md-2"><a href=""><img src="images/menu_docutheque.svg">  Tous les documents</a></li>
+						<li class= "col-md-2"><a href=""><img src="images/menu_depeche.svg">  Toutes les dépêches</a></li>
+						<li class= "col-md-2"><a href=""><img src="images/menu_video.svg">  Toutes les vidéos</a></li>
+						<li class= "col-md-2"><a href=""><img src="images/menu_info.svg">  Mode d'emploi</a></li>
+						<li class= "col-md-2"><a href=""><img src="images/menu_contact.svg">  Contacter la rédaction</a></li>
+						<li class= "col-md-1"></li>
+					</ul>
+				</div>
+				<div ng-controller="CandidatsController" class="container-fluid hidden-xs hidden-sm" id="liste_candidats">
+					<ul class = "nav navbar-nav">
+						<li ng-repeat="candidat in candidats" class="col-md-2 center">
+							<img class="row" src="images/{{candidat.image}}.png">  
+							<div class="row"><h4>{{candidat.prenom}} <strong>{{candidat.nom}}</strong></h4></div>
+							<div class="row">{{candidat.parti}}</div>
+							<a class="row" href="{{candidat.documents}}"><img src="images/docutheque.svg">Docuthèque</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+
+		<main>
+		<div ng-controller="ContenusController" class="container-fluid">
+			<div class="barre_new_theme col-md-12">
+				<div class="col-md-6">
+					<h4><input type="text" ng-model="newT" placeholder="Nouveau Thème" class="input"></h4>
+				</div>
+				<div class="col-md-6">
+					<button ng-click="addNewTheme();" class="bouton"> Valider</button>
+				</div>
+			</div>
+			<div ng-repeat="theme in themes">
+				<div class="barre_theme col-md-12">
+					<div class="col-md-9"><h4>{{$index + 1}} {{theme.titre}}</h4></div>
+											
+					<div class="col-md-1">
+						<button ng-click="ouvrePopupModifierTheme($index);" class="bouton"> Modifier</button>
+					</div>
+					<div class="col-md-1">
+						<button ng-click="ouvrePopupSuppressionTheme($index);" class="bouton">Supprimer</button>
+					</div>
+					
+					<div class="popup editpopup-{{theme.popupSuppression}}">
+            			Hep ! Etes-vous sûr de vouloir supprimer le thème "{{theme.titre}}" ?
+            			<button ng-click="supprimeTheme($index);" class="bouton">Oui, supprimer ce thème</button>
+            			<button ng-click="fermePopupSuppressionTheme($index);" class="bouton">Oups, non ! Garder ce thème</button>
+         			</div>
+         			
+         			<div class="popup editpopup-{{theme.popupModifier}}">
+            			Remplacer "{{theme.titre}}" par <input type="text" ng-model="theme.modifiedT" placeholder="Nouveau Thème" class="input_modifier">
+            			<button ng-click="modifieTheme($index);" class="bouton">Valider</button>
+            			<button ng-click="fermePopupModifierTheme($index);" class="bouton">Annuler</button>
+         			</div>
+		  
+					<div class="col-md-1 flecheBlc" ng-controller="ImgBlcController"><img src="images/{{imageBlc}}" ng-click="derouleTheme();"></div>
+			
+				</div>
+				<div class="barre_new_sous_theme col-md-12" ng-show="derouleT">
+						<div class="col-md-6">
+							<h4><input type="text" ng-model="theme.newST" placeholder="Nouveau Sous-thème" class="input"></h4>
+						</div>
+						
+						<div class="col-md-6">
+							<button ng-click="addNewSousTheme($index);" class="bouton"> Valider</button>
+						</div>
+				</div>
+				<div  ng-repeat="sousTheme in theme.sousThemes" ng-show="derouleT">
+					
+					<div class="barre_sousTheme col-md-12">
+						<div class="col-md-9"><h5>{{$index + 1}} {{sousTheme.titre}}</h5></div>
+						<div class="col-md-1">
+							<button ng-click="ouvrePopupModifierSousTheme($parent.$index, $index);" class="bouton"> Modifier</button>
+						</div>
+						<div class="col-md-1">
+							<button ng-click="ouvrePopupSuppressionSousTheme($parent.$index, $index);" class="bouton">Supprimer</button>
+						</div>
+						
+						<div class="popup editpopup-{{sousTheme.popupSuppression}}">
+            				Hep ! Etes-vous sûr de vouloir supprimer le sous-thème "{{sousTheme.titre}}" ?
+            				<button ng-click="supprimeSousTheme($parent.$index, $index);" class="bouton">Oui, supprimer ce sous-thème</button>
+            				<button ng-click="fermePopupSuppressionSousTheme($parent.$index, $index);" class="bouton">Oups, non ! Garder ce sous-thème</button>
+         				</div>
+         				
+         				<div class="popup editpopup-{{sousTheme.popupModifier}}">
+            				Remplacer "{{sousTheme.titre}}" par <input type="text" ng-model="sousTheme.modifiedST" placeholder="Nouveau Sous-thème" class="input_modifier">
+            				<button ng-click="modifieSousTheme($parent.$index, $index);" class="bouton">Valider</button>
+            				<button ng-click="fermePopupModifierSousTheme($parent.$index, $index);" class="bouton">Annuler</button>
+         				</div>
+         				
+						<div class="col-md-1 flecheGrise" ng-controller="ImgGriseController"><img src="images/{{imageGrise}}" ng-click="derouleSousTheme();"></div>
+						
+					</div>
+					<ul class = "nav navbar-nav" ng-show="derouleST">
+						<li ng-repeat="contenu in sousTheme.contenus" class="col-md-2 center detail"> 
+							<div class="row "><h5>{{contenu.candidat.prenom}} <strong>{{contenu.candidat.nom}}</strong></h5></div>
+							<div class="row hidden-lg hidden-sm hidden-md"><h5>{{contenu.candidat.parti}}</h5></div>
+							<div><textarea ng-model="contenu.modifiedTxt" placeholder="Nouveau contenu" class="input_contenu">{{contenu.texte}}</textarea></div>
+							<button ng-click="ModifieTxt($parent.$parent.$index, $parent.$index, $index);" class="bouton"> Valider</button>
+							<div> {{contenu.texte}}</div>						
+						</li>
+					</ul>						
+				
+				</div>
+			</div>
+		</div>
+		</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	
+	</body>
+</html>

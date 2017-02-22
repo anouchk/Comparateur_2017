@@ -1,0 +1,214 @@
+body {
+  padding-top: 350px;
+}
+
+/* ------------------ HEADER -------------------------*/
+/*
+#en-tete {
+	background-color : #3E4447;
+}
+*/
+#en-tete {
+	background-color : #2F3336;
+}
+
+#logo {
+	height : 50px;
+	width : 50px;
+}
+
+#plus {
+	height : 30px;
+	width : 30px;
+	padding-top : 10px;
+}
+
+h1 {
+	text-align : center;
+	display : inline;
+	color : #FFFFFF;
+}
+
+#menu img{
+	height : 30px;
+	width : 30px;
+}
+
+#menu .col-md-2{ 
+	padding-left : 0px;
+	padding-right : 0px;
+}
+#menu .navbar-nav{ 
+	float: none;
+	clear: both;
+}
+
+.center{
+	 text-align: center;
+}
+
+/*  on met des border aux div pour les voir, à desactiver pour la version finale
+ul{
+	border : solid ;
+	color : red ;
+} 
+li{
+	border : solid ;
+	color : yellow ;
+	padding-left : 0px;
+	padding-right : 0px;
+} 
+
+div{
+	border : solid ;
+	color : blue ;
+} 
+a{
+	border : solid ;
+	color : white ;	
+} 
+ on met des border aux div pour les voir, à desactiver pour la version finale */	
+ 
+#liste_candidats a img{
+	height : 15px;
+	width : 15px;
+}
+
+#liste_candidats img{
+	height : 90px;
+	width : 90px;
+	border-radius : 50% ;
+}
+
+#liste_candidats .navbar-nav {
+	color :#FFFFFF;
+	float: none;
+	clear: both;
+}
+
+
+/* ---------------------- MAIN -------------------------------------------------*/
+.barre_new_theme {
+	width : 100%;
+	height : 40px;
+	background-color : #78D000;
+	border-radius : 4px ;
+	margin-top : 1px;
+}
+
+.input {
+	width : 100%;
+	margin-top : -4px;
+}
+
+.input_modifier {
+	width : 30%;
+	margin-top : -4px;
+	color: #000000;
+}
+
+.input_contenu {
+	width : 100%;
+	padding-top : 10 px;
+}
+
+.validerNewT {
+	padding: 4px;
+	margin-top : 4px;
+}
+	
+.barre_theme {
+	width : 100%;
+	height : 40px;
+	background-color : #78D000;
+	color : #FFFFFF;
+	border-radius : 4px ;
+	margin-top : 1px;
+}
+
+.barre_theme img{
+	height : 22px;
+	width : 22px;
+	margin-top : 9px;
+}
+
+.barre_new_sous_theme {
+	width : 100%;
+	height : 40px;
+	background-color : #EDEDED;
+	color :  #3E4447;
+	border-radius : 4px ;
+	margin-top : 1px;
+}
+
+.validerNewST {
+	padding: 4px;
+	margin-top : 4px;
+}
+
+.bouton {
+	padding: 4px;
+	margin-top : 4px;
+	color :  #3E4447;
+}
+
+.barre_sousTheme {
+	width : 100%;
+	height : 40px;
+	background-color : #EDEDED;
+	color :  #3E4447;
+	border-radius : 4px ;
+	margin-top : 1px;
+}
+
+.barre_sousTheme img {
+	height : 18px;
+	width : 18px;
+	margin-top : 10px;
+}
+
+.detail {
+	border-right : solid 2px;
+	border-color : #78D000;
+}
+
+.popup {
+		 color : #FFFFFF;
+         width: 100%;
+         height: 70px;
+         border: 1px solid black;
+         display: none;
+         position: absolute;
+         padding-left : 10px;
+         top: 0px;
+         left: 0px;
+         bottom: 0px;
+         right: 0px;
+         margin: 0 auto;
+         background-color:gray;
+}
+
+.editpopup-true {
+         display: block;
+}
+
+.editpopup-false {
+         display: none;
+}
+/*
+#theme_ferme {
+	background-image: url("fleche_bas_blc.svg");
+}
+
+#theme_ouvert {
+	background-image: url("fleche_haut_blc.svg");
+}
+
+#sous_theme_ferme {
+	background-image: url("fleche_bas_grise.svg");
+}
+
+#sous_theme_ouvert {
+	background-image: url("fleche_haut_grise.svg");
+}
+*/
