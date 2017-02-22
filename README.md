@@ -1,6 +1,6 @@
 # 2017 French presidential election comparator
 
-The purpose of this **<a href="https://anouchk.github.io/Comparateur_2017/comparateur_journalistes_presidentielle.html">app</a>** is to <b>compare the six main candidates' programs for French presidential election, by themes and sub-themes</b>. I applied this on the environmental field, which is my area at the newswire AEF where I work as a journalist.
+The purpose of this **<a href="https://anouchk.github.io/Comparateur_2017/comparateur_journalistes_contenus.html">app</a>** is to <b>compare the six main candidates' programs for French presidential election, by themes and sub-themes</b>. I applied this on the environmental field, which is my area at the newswire AEF where I work as a journalist.
 
 Having no skills in back programing to store the data, I used <b>Angular.JS</b> to imagin the system that would allow a journalist to create a theme, a sub-theme, and fill the content by candidate.
 
