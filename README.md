@@ -14,6 +14,10 @@ I wanted the system to look as closely as possible as the front, so that the jou
 
 The projet was then re-used by the design and developers team at my newswire, where it was re-built with some Ajax to store the data.
 
+**Journalistic use**
+
+It gave way to the publication of 7 interactive tools during the French presidential campaign, aka comparators, on <a href="http://www.aef.info/modules/comparateur/1">sustainability</a>, <a href="http://www.aef.info/modules/comparateur/2">housing</a>, <a href="http://www.aef.info/modules/comparateur/3">school teaching<a>, <a href="http://www.aef.info/modules/comparateur/4">security</a>, <a href="http://www.aef.info/modules/comparateur/5">research</a>, <a href="http://www.aef.info/modules/comparateur/6">social protection<a>, <a href="http://www.aef.info/modules/comparateur/8">human resources and employment</a>.
+
 # Comparateur pour l'élection présidentielle 2017
 
 Cette **<a href="https://anouchk.github.io/Comparateur_2017/comparateur_journalistes_contenus.html">application</a>** permet de <b>comparer, par thème et par sous-thème, les programmes des six principaux candidats à l'élection présidentielle 2017</b>. Les fonctions sont ici destinées au journalistes censés remplir le contenu d'une telle application.
@@ -31,3 +35,7 @@ J'ai voulu que le système soit le plus ressemblant au front, afin que le journa
 **Next** 
 
 Réalisé dans le cadre d'un projet de fin de formation auprès de Simplon, le programme a ensuite été repris par l'équipe de développeurs et design de mon agence, qui l'a reconstruit en introduisant de l'Ajax pour stocker les données.
+
+**Journalistic use**
+
+Cela a donné lieu à la publication de 7 outils interactifs durant la campagne présidentielle française : des comparateurs en matière de <a href="http://www.aef.info/modules/comparateur/1">développement durable</a>, <a href="http://www.aef.info/modules/comparateur/2">habitat et urbanisme</a>, <a href="http://www.aef.info/modules/comparateur/3">enseignement scolaire<a>, <a href="http://www.aef.info/modules/comparateur/4">sécurité</a>, <a href="http://www.aef.info/modules/comparateur/5">enseignement supérieur et recherche</a>, <a href="http://www.aef.info/modules/comparateur/6">protection sociale<a>, <a href="http://www.aef.info/modules/comparateur/8">emploi et ressources humaines</a>.
